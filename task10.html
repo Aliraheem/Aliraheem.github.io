@@ -17,6 +17,8 @@
           button.hidden = true;
           Video_0.pause();
 
+ 
+
           marker.addEventListener("markerFound", function (evt) {
             markerFound = 1;
             button.hidden = false;
@@ -24,11 +26,15 @@
             // to start immediently on marker detection, uncomment this
           });
 
+ 
+
           marker.addEventListener("markerLost", function (evt) {
             markerFound = 0;
             Video_0.pause();
             button.hidden = true;
           });
+
+ 
 
           // button for video play/pause
           button.addEventListener("click", function(evt){
@@ -43,6 +49,8 @@
               Video_0.pause();
             }
           });
+
+ 
 
           // button for full screen
           fullbutton.addEventListener("click",
@@ -60,7 +68,7 @@
                     /* IE/Edge */
                     elem.msRequestFullscreen();
                 }
-                fullbutton.setAttribute("src", "asset/exit_fullscreen.png");
+                fullbutton.setAttribute("src", "assets/exit_fullscreen.png");
                 fullscreen = 1;
               } else {
                 if (document.exitFullscreen) {
@@ -72,7 +80,7 @@
                 } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
-                fullbutton.setAttribute("src", "asset/fullscreen.png");
+                fullbutton.setAttribute("src", "assets/fullscreen.png");
                 fullscreen = 0;
               }
             });
