@@ -12,7 +12,7 @@ with limited data</title>
 <p><br /> 
 <br /></p>
 	
-	<h1 align="center">Adaptation of Tacotron2-based speech synthesis with limited data </h1>
+	<h1 align="center">Speaker adaptation experiments with limited data for end-to-end Text-To-Speech synthesis using Tacotron2 </h1>
         </header>
       </article>
 	  <p>  </p>
@@ -23,13 +23,7 @@ with limited data</title>
 	  </p>  
 <p> 
 </p>
-<p><b>Abstract:</b> Limited data speaker adaptation is a disobedient function due to the overly few training samplings. 
-	The intractable problem with a few-shot speaker adaptation is the irregular allocation of linguistic tokens. 
-	Usually, the model of the target speaker would be incapable of synthesizing unseen sentences. 
-	The quality of synthesized speech is also improved as the dataset grows larger. 
-	To build up light-weighted systems, measuring the minimum necessary target data samples and training period is crucial to acquire a reasonable quality.
-	We conducted different experiments for adaptive text to speech (TTS) to show the performance of the Tacotron2 model and WaveGlow vocoder with an English dataset at several training data samples and training lengths. 
-	According to our investigation, the Tacotron2 model exhibits a worthy performance in terms of speaker quality and similarity for unseen speakers of English at 100 samples of data (pair of text and voice) with a low training period, based on subjective and objective evaluations.</p>
+<p><b>Abstract:</b> Speech synthesis has the aim of generating human-like speech from text input. Nowadays, with end-to-end systems, highly natural synthesized speech can be achieved, if there is a large enough dataset available from the target speaker. However, often it would be necessary to adapt to a target speaker of whom only few training samples are available. Limited data speaker adaptation might be a difficult problem due to the overly few training samples. Issues might appear with few-shot speaker adaptation, such as the irregular allocation of linguistic tokens (i.e., some speech sounds are left out from the synthesized speech, and the result will be unintelligible). The quality of synthesized speech is improving as the dataset grows larger. To build light-weight systems, measuring the amount of minimum necessary target data samples and training epochs is crucial to acquire a reasonable quality. We conducted detailed experiments with four target speakers for speaker adaptive text-to-speech (TTS) synthesis to show the performance of the end-to-end Tacotron2 model and the WaveGlow neural vocoder with an English dataset at several training data samples and training lengths. We evaluated the results with objective measures (Mel-Cepstral Distortion) and with a subjective experiment (listening test with 21 subjects). According to our investigation, the Tacotron2 model exhibits a good performance in terms of speech quality and similarity for unseen target speakers at 100 sentences of data (pair of text and speech) with a relatively low training time.</p>
 
 <h3><u>Datasets</u></h3>
 <ul><li><a href="http://www.openslr.org/109/" target="_blank">Hi-Fi Multi-Speaker English TTS Dataset</a></li>
