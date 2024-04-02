@@ -1,245 +1,235 @@
-<head>
-    <Enhancing End-to-End Speech Synthesis by Modeling Interrogative Sentences with Speaker Adaptation</title>
-      <article>
-        <header>
-		
-		
-		<p align="center"><img width="30%" src="img/bme_logo_nagy.jpg" /></p>
-		
-		
-  
-<p><br /> 
-<br /></p>
-	
-	<h1 align="center" style="margin-bottom: 20px;">Investigations on Speaker Adaptation using a Continuous Vocoder within Recurrent Neural Network based Text-to-Speech Synthesis</h1>
-
-<p align="center"><b>Authors:</b> Ali Raheem Mandeel, Mohammed Salah Al-Radhi, Tamás Gábor Csapó</p>
-<p align="center"><b>Email:</b> {alimandeel, malradhi, csapot}@tmit.bme.hu</p>
-
-	  <p> 
-	  </p>  
-<p> 
-</p>
-<p><b>Abstract:</b>This paper presents an investigation of speaker adaptation using a continuous vocoder for parametric text-to-speech (TTS) synthesis. In purposes that demand low computational complexity, conventional vocoder-based statistical parametric speech synthesis can be preferable. While capable of remarkable naturalness, recent neural vocoders nonetheless fall short of the criteria for real-time synthesis. We investigate our former continuous vocoder, in which the excitation is characterized employing two one-dimensional parameters:   Maximum Voiced Frequency and continuous fundamental frequency (F0). We show that an average voice can be trained for deep neural network-based TTS utilizing data from nine English speakers. We did speaker adaptation experiments for each target speaker with 400 utterances (approximately 14 minutes). We showed an apparent enhancement in the quality and naturalness of synthesized speech compared to our previous work by utilizing the recurrent neural network topologies. According to the objective studies (Mel-Cepstral Distortion and F0 correlation), the quality of speaker adaptation using Continuous Vocoder-based DNN-TTS is slightly better than the WORLD Vocoder-based baseline. The subjective MUSHRA-like test results also showed that our speaker adaptation technique is almost as natural as the WORLD vocoder using Gated Recurrent Unit and Long Short Term Memory networks. The proposed vocoder, being capable of real-time synthesis, can be used for applications which need fast synthesis speed.</p>
-
+<div>
+<article><header>
+<p align="center"><img src="img/bme_logo_nagy.jpg" alt="" width="30%" /></p>
+<p><br /> </p>
+<h1 style="margin-bottom: 20px;" align="center">Investigations on Speaker Adaptation using a Continuous Vocoder within Recurrent Neural Network based Text-to-Speech Synthesis</h1>
+<p align="center"><strong>Authors:</strong> Ali Raheem Mandeel, Mohammed Salah Al-Radhi, Tam&aacute;s G&aacute;bor Csap&oacute;</p>
+<p align="center"><strong>Email:</strong> {alimandeel, malradhi, csapot}@tmit.bme.hu</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Abstract:</strong>This paper presents an investigation of speaker adaptation using a continuous vocoder for parametric text-to-speech (TTS) synthesis. In purposes that demand low computational complexity, conventional vocoder-based statistical parametric speech synthesis can be preferable. While capable of remarkable naturalness, recent neural vocoders nonetheless fall short of the criteria for real-time synthesis. We investigate our former continuous vocoder, in which the excitation is characterized employing two one-dimensional parameters: Maximum Voiced Frequency and continuous fundamental frequency (F0). We show that an average voice can be trained for deep neural network-based TTS utilizing data from nine English speakers. We did speaker adaptation experiments for each target speaker with 400 utterances (approximately 14 minutes). We showed an apparent enhancement in the quality and naturalness of synthesized speech compared to our previous work by utilizing the recurrent neural network topologies. According to the objective studies (Mel-Cepstral Distortion and F0 correlation), the quality of speaker adaptation using Continuous Vocoder-based DNN-TTS is slightly better than the WORLD Vocoder-based baseline. The subjective MUSHRA-like test results also showed that our speaker adaptation technique is almost as natural as the WORLD vocoder using Gated Recurrent Unit and Long Short Term Memory networks. The proposed vocoder, being capable of real-time synthesis, can be used for applications which need fast synthesis speed.</p>
 <h3><u>Datasets</u></h3>
-<ul><li><a href="https://datashare.ed.ac.uk/handle/10283/2651" target="_blank">VCTK-Corpus</a></li>
+<ul>
+<ul>
+<li><a href="https://datashare.ed.ac.uk/handle/10283/2651" target="_blank">VCTK-Corpus</a></li>
 <li>4 target speakers: 2 Males + 2 Females</li>
-	 <p> 
-         <p>
-		 <!-- 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
-
-<table style="width: 793px; height: 303px; margin-left: auto; margin-right: auto;" border="1">
+</ul>
+</ul>
+<p><!-- 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 --></p>
+<br />
+<table style="width: 2060.05px; height: 303px; margin-left: auto; margin-right: auto;" border="1">
 <tbody>
-  <tr>
-    <td style="width: 64.9125px;">&nbsp;Sentence</td>
-    <td style="width: 47px;">Speech (Ground truth)</td>
-    <td style="width: 99.3125px;">WORLD vocoder/FFNN</td>
-    <td style="width:99.3375px;">WORLD vocoder/GRU</td>
-    <td style="width: 92.75px;">WORLD vocoder/LSTM</td>
-    <td style="width: 115.775px;">Continuous vocoder/FFNN</td>
-    <td style="width: 115.787px;">Continuous vocoder/GRU</td>
-    <td style="width: 109.275px;">Continuous vocoder/LSTM</td>
-   <tr>    
 <tr>
-    <td style="width: 64.9125px;">&nbsp;F234/01</td>
-    <td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p234/p234_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p234/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p234/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p234/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p234/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p234/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p234/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;Sentence</td>
+<td style="width: 10px;">Speech (Ground truth)</td>
+<td style="width: 136px;">WORLD vocoder/FFNN</td>
+<td style="width: 99px;">WORLD vocoder/GRU</td>
+<td style="width: 92px;">WORLD vocoder/LSTM</td>
+<td style="width: 115px;">Continuous vocoder/FFNN</td>
+<td style="width: 115px;">Continuous vocoder/GRU</td>
+<td style="width: 10px;">Continuous vocoder/LSTM</td>
 </tr>
 <tr>
-    <td style="width: 64.9125px;">&nbsp;F234/02</td>
-    <td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p234/p234_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p234/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p234/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p234/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p234/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p234/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p234/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;F234/01</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p234/p234_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p234/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p234/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p234/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p234/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p234/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p234/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-    <td style="width: 64.9125px;">&nbsp;F234/03</td>
-    <td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p234/p234_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3125px;""><audio controls><source src="listening_test_mushra/world/FFNN/p234/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p234/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p234/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p234/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p234/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p234/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;F234/02</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p234/p234_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p234/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p234/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p234/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p234/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p234/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p234/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-    <td style="width: 64.9125px;">&nbsp;F234/04</td>
-    <td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p234/p234_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p234/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p234/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p234/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p234/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p234/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p234/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;F234/03</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p234/p234_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p234/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p234/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p234/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p234/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p234/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p234/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-    <td style="width: 64.9125px;">&nbsp;F234/05</td>
-    <td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p234/p234_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p234/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p234/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p234/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p234/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p234/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-    <td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p234/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;F234/04</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p234/p234_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p234/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p234/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p234/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p234/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p234/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p234/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">&nbsp;M237/01</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p237/p237_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p237/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p237/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p237/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p237/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p237/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p237/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;F234/05</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p234/p234_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p234/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p234/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p234/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p234/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p234/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p234/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">&nbsp;M237/02</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p237/p237_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p237/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p237/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p237/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p237/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p237/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p237/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;M237/01</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p237/p237_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p237/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p237/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p237/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p237/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p237/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p237/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">&nbsp;M237/03</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p237/p237_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p237/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;""><audio controls><source src="listening_test_mushra/world/GRU/p237/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p237/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p237/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p237/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p237/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;M237/02</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p237/p237_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p237/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p237/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p237/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p237/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p237/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p237/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">&nbsp;M237/04</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p237/p237_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p237/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p237/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p237/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p237/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;""><audio controls><source src="listening_test_mushra/continuous/GRU/p237/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p237/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;M237/03</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p237/p237_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p237/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p237/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p237/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p237/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p237/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p237/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">&nbsp;M237/05</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p237/p237_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p237/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p237/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p237/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p237/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p237/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p237/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;M237/04</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p237/p237_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p237/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p237/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p237/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p237/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p237/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p237/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">F236/01</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p236/p236_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p236/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p236/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p236/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p236/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p236/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p236/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">&nbsp;M237/05</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p237/p237_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p237/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p237/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p237/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p237/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p237/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p237/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">F236/02</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p236/p236_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p236/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p236/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p236/test_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p236/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p236/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p236/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">F236/01</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p236/p236_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p236/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p236/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p236/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p236/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p236/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p236/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">F236/03</td>
-<td style="width:47px;"><audio controls><source src="listening_test_mushra/orginal/p236/p236_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p236/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p236/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p236/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p236/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p236/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p236/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">F236/02</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p236/p236_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p236/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p236/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p236/test_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p236/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p236/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p236/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">F236/04</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p236/p236_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p236/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p236/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p236/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p236/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p236/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p236/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">F236/03</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p236/p236_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p236/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p236/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p236/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p236/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p236/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p236/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">F236/05</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p236/p236_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p236/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p236/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p236/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p236/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p236/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p236/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">F236/04</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p236/p236_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p236/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p236/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p236/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p236/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p236/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p236/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">M247/01</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p247/p247_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p247/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p247/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p247/test_001.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p247/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p247/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p247/test_001_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">F236/05</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p236/p236_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p236/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p236/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p236/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p236/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p236/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p236/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">M247/02</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p247/p247_002.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p247/test_002.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p247/test_002.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p247/test_002.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p247/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p247/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p247/test_002_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">M247/01</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p247/p247_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p247/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p247/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p247/test_001.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p247/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p247/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p247/test_001_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">M247/03</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p247/p247_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p247/test_003.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p247/test_003.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p247/test_003.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p247/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p247/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p247/test_003_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">M247/02</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p247/p247_002.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p247/test_002.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p247/test_002.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p247/test_002.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p247/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p247/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p247/test_002_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">M247/04</td>
-<td style="width:47px;"><audio controls><source src="listening_test_mushra/orginal/p247/p247_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p247/test_004.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p247/test_004.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p247/test_004.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p247/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p247/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p247/test_004_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">M247/03</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p247/p247_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p247/test_003.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p247/test_003.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p247/test_003.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p247/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p247/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p247/test_003_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
-<td style="width: 64.9125px;">&nbsp;M247/05</td>
-<td style="width: 47px;"><audio controls><source src="listening_test_mushra/orginal/p247/p247_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3125px;"><audio controls><source src="listening_test_mushra/world/FFNN/p247/test_005.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 99.3375px;"><audio controls><source src="listening_test_mushra/world/GRU/p247/test_005.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 92.75px;"><audio controls><source src="listening_test_mushra/world/LSTM/p247/test_005.wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 115.775px;"><audio controls><source src="listening_test_mushra/continuous/FFNN/p247/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>>
-<td style="width: 115.787px;"><audio controls><source src="listening_test_mushra/continuous/GRU/p247/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
-<td style="width: 109.275px;"><audio controls><source src="listening_test_mushra/continuous/LSTM/p247/test_005_synthesized_with_Hilbert.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+<td style="width: 64px;">M247/04</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p247/p247_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p247/test_004.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p247/test_004.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p247/test_004.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p247/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p247/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p247/test_004_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+</tr>
+<tr>
+<td style="width: 64px;">&nbsp;M247/05</td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/orginal/p247/p247_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 136px;"><audio controls="controls"><source src="listening_test_mushra/world/FFNN/p247/test_005.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 99px;"><audio controls="controls"><source src="listening_test_mushra/world/GRU/p247/test_005.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 92px;"><audio controls="controls"><source src="listening_test_mushra/world/LSTM/p247/test_005.wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/FFNN/p247/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 115px;"><audio controls="controls"><source src="listening_test_mushra/continuous/GRU/p247/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
+<td style="width: 10px;"><audio controls="controls"><source src="listening_test_mushra/continuous/LSTM/p247/test_005_synthesized_with_Hilbert.wav" type="audio/wav" />Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody>
 </table>
+</header></article>
+</div>
