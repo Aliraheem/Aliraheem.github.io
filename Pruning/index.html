@@ -1,1 +1,198 @@
+<div>
+  <article>
+    <header>
+      <div style="text-align: center;">
+        <img src="img/bme_logo_nagy.jpg" alt="BME Logo" style="width: 30%;" />
+        <h1>Cross-lingual Speaker Adaptation Experiments for Arabic Speech Synthesis</h1>
+        <p><strong>Authors:</strong> Ali Raheem Mandeel, Mohammed Salah Al-Radhi</p>
+        <p><strong>Email:</strong> {alimandeel, malradhi}@tmit.bme.hu</p>
+      </div>
+      <hr>
+    </header>
+    
+    <section>
+      <h2>Abstract</h2>
+      <p>This study explores cross-lingual speaker adaptation techniques for Arabic speech synthesis, utilizing various TTS models and vocoders. The synthesized speech quality is evaluated for the target speaker, using different models and configurations.</p>
+    </section>
+    
+    <section>
+      <h2>Datasets</h2>
+      <ul>
+        <li><a href="https://en.arabicspeechcorpus.com/" target="_blank">Arabic Speech Corpus</a></li>
+        <li>One male target speaker</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Synthesized Speech with Speaker Adaptation</h2>
+      <table border="1" style="margin: 0 auto; width: 100%; text-align: center;">
+        <thead>
+          <tr>
+            <th>Sentence</th>
+            <th>Speech (Ground Truth)</th>
+            <th>Taco2-HiFi (VCTK)/400 sentences</th>
+            <th>FastSp2-HiFi (VCTK)/400 sentences</th>
+            <th>Taco2-HiFi (LJSpeech)/200 sentences</th>
+            <th>FastSp2-HiFi (LJSpeech)/200 sentences</th>
+            <th>Taco2-Glow/100 sentences</th>
+            <th>FastSp2-Glow/100 sentences</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop for sentences 01 to 10 -->
+          <!-- Example row for sentence 1 -->
+          <tr>
+            <td>01</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/ground_truth/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/Taco2-HiFi_VCTK/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_400/FastSp2-HiFi_VCTK/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/Taco2-HiFi_lj%20speech/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_200/FastSp2-HiFi_lj%20speech/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/Taco2-Glow/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS_adaptation/TTS_100/FastSp2-Glow/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Synthesized Speech of Vocoders and TTS Models without Speaker Adaptation</h2>
+      <table border="1" style="margin: 0 auto; width: 100%; text-align: center;">
+        <thead>
+          <tr>
+            <th>Sentence</th>
+            <th>WaveGlow</th>
+            <th>HiFi-GAN (VCTK)</th>
+            <th>HiFi-GAN (LJSpeech)</th>
+            <th>FastSp2-HiFi (VCTK)/Full Data</th>
+            <th>FastSp2-HiFi (LJSpeech)/Full Data</th>
+            <th>FastSp2-Glow/Full Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop for sentences 01 to 10 -->
+          <!-- Example row for sentence 1 -->
+          <tr>
+            <td>01</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/1.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+          <tr>
+            <td>02</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/2.wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/2.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/3.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+            <tr>
+            <td>04</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/4.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/5.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          <tr>
+            <td>06</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/6.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/WaveGlow/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(VCTK)/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/vocoding/HiFi_Gan%20(lJSpeech)/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_VCTK/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-HiFi_lj%20speech/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+            <td><audio controls style="width: 200px;"><source src="listening_test_mushra/TTS%20without%20adaptation/Full_data/FastSp2-Glow/7.wav" type="audio/wav">Your browser does not support the audio element.</audio></td>
+          </tr>
